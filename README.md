@@ -49,6 +49,8 @@ config.xml     | dokumen konfigurasi.
 4. *File* yang dihasilkan akan menjadi agen, tempatkan agen pada *endpoint* yang memiliki *subnet* yang sama dengan **IP:PORT** yang mau di-*scan*.
 
 ## Konfigurasi
+[`^ kembali ke atas ^`](#)
+
 Konfigurasi dapat diatur pada *config.xml* dengan struktur:
 
 ``` 
