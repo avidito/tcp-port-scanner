@@ -1,0 +1,5 @@
+## Ignore Object File
+*.o
+
+## Ignore Compiled Program
+port_scanner
