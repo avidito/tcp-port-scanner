@@ -1,0 +1,12 @@
+<root>
+  <server_address>10.8.30.56</server_address>
+  <timeout>5</timeout>
+  <service>
+    <address>10.8.30.57</address>
+    <port>80</port>
+  </service>
+  <service>
+    <address>10.8.30.58</address>
+    <port>5432</port>
+  </service>
+</root>
