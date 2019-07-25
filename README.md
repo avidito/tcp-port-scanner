@@ -1,10 +1,15 @@
-# tcp-port-scanner
-TCP Port Scanner untuk mengecek keaktifan (agen) dengan Half-Connect Scan (SYN Scan) dengan Socket dalam C.
+# TCP PORT SCANNER
+[Deskripsi](#deskripsi) | [Dokumen](#dokumen) | [Batasan](#batasan) | [Kebutuhan](#kebutuhan) | [Instalasi](#instalasi) | [Konfigurasi](#konfigurasi) | [Penggunaan](#penggunaan) | [Catatan](#catatan) |
+:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
 
 ## Deskripsi
-TCP Port Scanner yang dibuat berfungsi untuk mengecek apakah suatu port dari service dapat diakses atau tidak. Cara yang diterapkan adalah dengan melakukan koneksi Half-Connect (SYN Connect), yaitu menginisiasi koneksi ke suatu pasangan IP:Port. Jika agen mendapat sinyal kembalian (ACK) dari IP:Port, koneksi segera diputus dengan sinyal RST. Koneksi yang dibuat adalah koneksi TCP non-blocking dengan timeout yang diatur dalam file konfigurasi. Pengembangan dilakukan dalam OS Ubuntu 18.04 (Bionic Beaver).
+[`^ kembali ke atas ^`](#)
+
+TCP Port Scanner yang dibuat berfungsi untuk mengecek apakah suatu port dari service dapat diakses atau tidak. Cara yang diterapkan adalah dengan melakukan koneksi Half-Connect (SYN Connect), yaitu menginisiasi koneksi ke suatu pasangan IP:Port. Jika agen mendapat sinyal kembalian (ACK) dari IP:Port, koneksi segera diputus dengan sinyal RST. Koneksi yang dibuat adalah koneksi TCP non-blocking dengan timeout yang diatur dalam file konfigurasi. Pengembangan dilakukan dalam OS Ubuntu 18.04 (Bionic Beaver). Program dibuat dalam bahasa C.
 
 ## Dokumen
+[`^ kembali ke atas ^`](#)
+
 Nama | Deskripsi
 --- | ---
 port_scanner.c | fungsi utama.
@@ -13,15 +18,20 @@ portsc.h       | header untuk fungsi portsc.c.
 config.xml     | dokumen konfigurasi.
 
 ## Batasan
+[`^ kembali ke atas ^`](#)
+
 1. CentOS/Ubuntu (12.04).
 2. IP:Port yang dicek harus dalam 1 subnet dengan Agen.
 3. Pengiriman informasi dikirim melalui port 10000 (*hardcoded* pada *portsc.c*).
 
 ## Kebutuhan
+[`^ kembali ke atas ^`](#)
+
 1. GCC (C Compile).
 2. Text Editor (untuk mengatur dokumen konfigurasi).
 
 ## Instalasi
+[`^ kembali ke atas ^`](#)
 
 1. *Download* seluruh dokumen, tempatkan *portsc.c*, *portsc.h*, dan *port_scanner.c*.
 2. Buat *object* untuk *portsc.c*.
@@ -74,6 +84,8 @@ Untuk menambahkan **IP:PORT** yang akan di-*scan*, tambahkan bagian seperti beri
 ```
 
 ## Penggunaan
+[`^ kembali ke atas ^`](#)
+
 Untuk menjalankan (terminal):
 ``` ./__nama_agen__ ```
 
@@ -81,6 +93,9 @@ Untuk menjalankan DEBUG_MODE (terminal):
 ```./__nama_agen__ DEBUG```
 
 ## Catatan
+[`^ kembali ke atas ^`](#)
+
 1. Semua dokumen ini tidak memerlukan **Receiver Socket** yang melakukan *listen* di *port* 10000.
 2. Pengiriman ke *server* dilakukan dengan **TCP Blocking Connection**.
 3. Kode ini tidak dapat mengecek *local port*.
+4. Semua kode ditulis dengan bahasa **C**, namun untuk **Receiver Socket** bisa menggunakan bahasa apapun
