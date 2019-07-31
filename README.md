@@ -10,12 +10,12 @@ TCP Port Scanner yang dibuat berfungsi untuk mengecek apakah suatu port dari ser
 ## Dokumen
 [`^ kembali ke atas ^`](#)
 
-Nama | Deskripsi
---- | ---
-port_scanner.c | fungsi utama.
-portsc.c       | fungsi yang digunakan dalam scanning, parsing dan konstruksi (JSON, XML).
-portsc.h       | header untuk fungsi portsc.c.
-config.xml     | dokumen konfigurasi.
+Nama           | Deskripsi                                                                 |
+-------------- | ------------------------------------------------------------------------- |
+port_scanner.c | fungsi utama.                                                             |
+portsc.c       | fungsi yang digunakan dalam scanning, parsing dan konstruksi (JSON, XML). |
+portsc.h       | header untuk fungsi portsc.c.                                             |
+config.xml     | dokumen konfigurasi.                                                      |
 
 ## Batasan
 [`^ kembali ke atas ^`](#)
@@ -39,13 +39,13 @@ config.xml     | dokumen konfigurasi.
    ``` gcc -c portsc.c -o portsc.o ```
 
 3. Buat *agent* dengan meng-*compile port_scanner.c* dengan me *link portsc.o*.
-   
+
    ``` gcc portscanner.c portsc.o -o __nama_agent__```
 
    contoh:
-   
+
    ``` gcc portscanner.c portsc.o -o port_scanner```
-   
+
 4. *File* yang dihasilkan akan menjadi agen, tempatkan agen pada *endpoint* yang memiliki *subnet* yang sama dengan **IP:PORT** yang mau di-*scan*.
 
 ## Konfigurasi
@@ -53,7 +53,7 @@ config.xml     | dokumen konfigurasi.
 
 Konfigurasi dapat diatur pada *config.xml* dengan struktur:
 
-``` 
+```
 <root>
   <server_address>__alamat_penerima__</server_address>
   <timeout>___waktu_timeout__</timeout>

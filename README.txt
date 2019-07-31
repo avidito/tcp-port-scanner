@@ -1,10 +1,11 @@
 # TCP PORT SCANNER
 
 ## Deskripsi
-TCP Port Scanner yang dibuat berfungsi untuk mengecek apakah suatu port dari service dapat diakses atau tidak. Cara yang diterapkan adalah
-dengan melakukan koneksi Half-Connect (SYN Connect), yaitu menginisiasi koneksi ke suatu pasangan IP:Port. Jika agen mendapat sinyal
-kembalian (ACK) dari IP:Port, koneksi segera diputus dengan sinyal RST. Koneksi yang dibuat adalah koneksi TCP non-blocking dengan timeout
-yang diatur dalam file konfigurasi. Pengembangan dilakukan dalam OS Ubuntu 18.04 (Bionic Beaver). Program dibuat dalam bahasa C.
+TCP Port Scanner yang dibuat berfungsi untuk mengecek apakah suatu port dari service dapat diakses atau tidak.
+Cara yang diterapkan adalah dengan melakukan TCP-scan, yaitu menginisiasi koneksi ke suatu pasangan IP:Port dan
+melakukan *three-way handshake connection*. Jika agen mendapat sinyal kembalian (ACK) dari IP:Port, koneksi segera
+diputus dengan sinyal RST. Koneksi yang dibuat adalah koneksi TCP non-blocking dengan timeout yang diatur dalam
+file konfigurasi. Pengembangan dilakukan dalam OS Ubuntu 18.04 (Bionic Beaver). Program dibuat dalam bahasa C.
 
 ## Dokumen
 |    Nama        |                                   Deskripsi                               |
